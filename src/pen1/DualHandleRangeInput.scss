@@ -1,0 +1,57 @@
+.dual-handle-range {
+    width: 100%;
+    min-height: 1em;
+    display: flex;
+    div{
+        min-height: 1em;
+        display: block;
+    }
+
+    .inverse-range-display {
+        background-color: black;
+    }
+
+    .handle {
+        width: 3px;
+        min-height: 100%;
+        background-color: rgb(11, 77, 201);
+        cursor: pointer;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+
+        &::before {
+            display: block;
+            transform: translate(-0.15em, -0.1em);
+            -ms-transform: translate(-0.15em, -0.1em);
+            background-color: transparent;
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #0b4dc9;
+        }
+        &::after {
+            display: block;
+            transform: translate(-0.15em, 0.9em);
+            background-color: transparent;
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #0b4dc9;
+        }
+    }
+
+    .higlighted-range-display {
+        background-color: rgb(0, 238, 255);
+    }
+}
